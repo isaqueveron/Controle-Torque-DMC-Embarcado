@@ -32,3 +32,13 @@ O projeto foi validado em ambiente Linux (Debian) utilizando Python 3.x com as s
 1. **Identificação da Planta:** Realize os ensaios de resposta ao degrau em malha aberta para gerar os arquivos `.csv` de calibração:
    ```bash
    python aquisicao_resposta_degrau.py
+
+2. **Validação Temporal do Solver:** Execute o benchmark de Monte Carlo para garantir que o otimizador calcula o esforço dentro da janela de amostragem de 50 ms:
+
+   ```bash
+   python monte_carlo_otimizador.py
+
+3. **Controle em Malha Fechada:** Com a bancada ligada e as portas seriais configuradas, inicialize o laço de controle preditivo:
+
+   ```bash
+   python main_dmc_embarcado.py
